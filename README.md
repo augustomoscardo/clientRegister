@@ -62,7 +62,7 @@ Front:
 - TypeScript
 - ReactJS
 - Phosphor-icons
-- Formik
+- React Hook Form
 - Yup
 - Styled-Components
 - Axios
