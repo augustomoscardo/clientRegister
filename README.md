@@ -7,10 +7,12 @@ First, install all depencies from package.json:
 yarn
 ```
 
-Then run the development server:
+Then run the development environment:
 ```bash
 yarn dev
 ```
+
+* You must run the server separetly.
 
 Make Sure to Setup Prisma:
 ```bash
