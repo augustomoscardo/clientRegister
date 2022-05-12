@@ -45,15 +45,15 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 # Project view
 
-  <div styles="display:flex; align-intems: center; jusity-content:space-between;">
-    <img src="img/desktop-design1.png" alt="Mobile design" width="200" height="400">
-    <img src="img/desktop-design2.png" alt="Mobile design" width="200" height="400">
-    <img src="img/desktop-design3.png" alt="Mobile design" width="200" height="400">
+  <div styles="display:flex; align-intems: center; jusity-content:space-between; width:100%">
+    <img src="img/desktop-design1.png" alt="Mobile design" width="900" height="400">
+    <img src="img/desktop-design2.png" alt="Mobile design" width="900" height="400">
+    <img src="img/desktop-design3.png" alt="Mobile design" width="900" height="400">
   </div>
-  <div>
-    <img src="public/img/desktop-design1.png" alt="Desktop design" width="300" height="150">
-    <img src="public/img/desktop-design2.png" alt="Desktop design" width="300" height="150">
-    <img src="public/img/desktop-design3.png" alt="Desktop design" width="300" height="150">
+  <div "display:flex; align-intems: center; jusity-content:space-between; width:100%>
+    <img src="img/mobile-design1.png" alt="Mobile design" width="300" height="500">
+    <img src="img/mobile-design2.png" alt="Mobile design" width="300" height="500">
+    <img src="img/mobile-design3.png" alt="Mobile design" width="300" height="500">
   </div>
 
   ## Technologies
