@@ -8,7 +8,6 @@ export const Footer = styled.footer`
 
   bottom: 0;
   margin: 2rem 0;
-  /* position: fixed; */
 
   p {
     color: var(--text-fade);

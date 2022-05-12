@@ -45,4 +45,8 @@ export const Content = styled.main`
       text-align: center;
     }
   }
+
+  @media (max-width: 780px) {
+    margin-top: 2.5rem;
+  }
 `;

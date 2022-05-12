@@ -80,7 +80,7 @@ export function RegisterForm() {
       </div>
       <div>
         <InputMask
-          mask="(99) 99999-9999"
+          mask="(99)99999-9999"
           type="tel"
           id="telephone"
           placeholder="Digite seu número para contato"

@@ -16,8 +16,6 @@ export const FormContainer = styled.form`
   }
 
   input {
-    /* box-shadow: 2px 2px 2px 1px var(--text-fade); */
-
     width: 400px;
 
     background: var(--gray-light);

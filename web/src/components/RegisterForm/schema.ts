@@ -1,6 +1,6 @@
 import * as yup from "yup";
 
-const telephoneRegExp = /^\([1-9]{2}\) (?:[2-8]|9[1-9])[0-9]{3}\-[0-9]{4}$/;
+const telephoneRegExp = /^\([1-9]{2}\)(?:[2-8]|9[1-9])[0-9]{3}\-[0-9]{4}$/;
 
 const registerFormSchema = yup.object().shape({
   name: yup.string().required("Nome obrigatório"),
@@ -11,7 +11,7 @@ const registerFormSchema = yup.object().shape({
     .required("Telefone obrigatório")
     .matches(
       telephoneRegExp,
-      "Insira um nº de celular Whatsapp Ex: (12) 92222-2222"
+      "Insira um nº de celular Whatsapp Ex: (12)92222-2222"
     ),
 });
 

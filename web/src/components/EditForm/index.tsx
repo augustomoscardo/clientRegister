@@ -23,7 +23,7 @@ export function EditForm() {
   const [isSubmitingData, setIsSubmittingData] = useState(false);
   const [user, setUser] = useState<EditFormData | null>(null);
 
-  const { query, push } = useRouter();
+  const { query } = useRouter();
 
   const { editClient, getClients } = useClients();
 

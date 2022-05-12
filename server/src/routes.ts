@@ -8,10 +8,6 @@ routes.get("/clients/:id", async (req, res) => {
   try {
     const { id } = req.params;
 
-    console.log({
-      id,
-    });
-
     const client = await prisma.cliente.findUnique({
       where: {
         id,
@@ -41,49 +37,61 @@ routes.get("/clients", async (req, res) => {
 
 //create
 routes.post("/create", async (req, res) => {
-  const { name, birthday, email, telephone } = req.body;
+  try {
+    const { name, birthday, email, telephone } = req.body;
 
-  const createClient = await prisma.cliente.create({
-    data: {
-      name,
-      birthday,
-      email,
-      telephone,
-    },
-  });
+    const createClient = await prisma.cliente.create({
+      data: {
+        name,
+        birthday,
+        email,
+        telephone,
+      },
+    });
 
-  return res.status(201).json({ data: createClient });
+    return res.status(201).json({ data: createClient });
+  } catch (err) {
+    console.log(err);
+  }
 });
 
 //update
 routes.put("/clients/:id/edit", async (req, res) => {
-  const { id } = req.params;
-  const { name, birthday, email, telephone } = req.body;
+  try {
+    const { id } = req.params;
+    const { name, birthday, email, telephone } = req.body;
 
-  const updateClient = await prisma.cliente.update({
-    where: {
-      id,
-    },
-    data: {
-      name,
-      birthday,
-      email,
-      telephone,
-    },
-  });
+    const updateClient = await prisma.cliente.update({
+      where: {
+        id,
+      },
+      data: {
+        name,
+        birthday,
+        email,
+        telephone,
+      },
+    });
 
-  return res.status(201).json({ data: updateClient });
+    return res.status(201).json({ data: updateClient });
+  } catch (err) {
+    console.log(err);
+  }
 });
 
 //delete
 routes.delete("/clients/:id/delete", async (req, res) => {
-  const { id } = req.params;
+  try {
+    const { id } = req.params;
 
-  await prisma.cliente.delete({
-    where: {
-      id,
-    },
-  });
+    await prisma.cliente.delete({
+      where: {
+        id,
+      },
+    });
 
-  return res.status(201).send("Cliente deletado.");
+    return res.status(201).send("Cliente deletado.");
+  } catch (err) {
+    console.log(err);
+  }
 });
