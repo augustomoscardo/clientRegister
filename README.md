@@ -38,6 +38,8 @@ model Cliente {
 }
 ```
 
+* Create a ```.env``` file in the web directory and set the value to DATABASE_URL.
+
 Execute 
 ```
 yarn prisma migrate dev
