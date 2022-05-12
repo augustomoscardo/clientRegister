@@ -36,7 +36,8 @@ model Cliente {
 }
 ```
 
-Execute ```
+Execute 
+```
 yarn prisma migrate dev
 ```
 
