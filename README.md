@@ -65,6 +65,7 @@ Front:
 - Formik
 - Yup
 - Styled-Components
+- Axios
 
 Back: 
 - Node
