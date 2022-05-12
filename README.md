@@ -2,33 +2,81 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
-
+First, install all depencies from package.json:
 ```bash
-npm run dev
-# or
+yarn
+```
+
+Then run the development server:
+```bash
 yarn dev
+```
+
+Make Sure to Setup Prisma:
+```bash
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Cliente {
+  id String @id @default(uuid())
+
+  name      String
+  birthday  String
+  email     String
+  telephone String
+
+
+  @@map("clientes")
+}
+```
+
+Execute ```
+yarn prisma migrate dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+# Project view
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+  <div styles="display:flex; align-intems: center; jusity-content:space-between;">
+    <img src="img/desktop-design1.png" alt="Mobile design" width="200" height="400">
+    <img src="img/desktop-design2.png" alt="Mobile design" width="200" height="400">
+    <img src="img/desktop-design3.png" alt="Mobile design" width="200" height="400">
+  </div>
+  <div>
+    <img src="public/img/desktop-design1.png" alt="Desktop design" width="300" height="150">
+    <img src="public/img/desktop-design2.png" alt="Desktop design" width="300" height="150">
+    <img src="public/img/desktop-design3.png" alt="Desktop design" width="300" height="150">
+  </div>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+  ## Technologies
+Front:
+- NextJS
+- TypeScript
+- ReactJS
+- Phosphor-icons
+- Formik
+- Yup
+- Styled-Components
 
-## Learn More
+Back: 
+- Node
+- Express
+- Cors
+- Prismma ORM
+- SQLite
 
-To learn more about Next.js, take a look at the following resources:
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/augustomoscardo)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/augustomoscardo)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Badges
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
