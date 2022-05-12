@@ -38,7 +38,7 @@ model Cliente {
 }
 ```
 
-* Create a ```.env``` file in the web directory and set the value to DATABASE_URL.
+* Create a ```.env``` file in the server directory and set the value ```DATABASE_URL="file:.dev.db"```.
 
 Execute 
 ```
